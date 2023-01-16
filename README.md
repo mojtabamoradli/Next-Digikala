@@ -9,7 +9,6 @@ Demo: https://cerulean-sundae-b705c9.netlify.app/
 ```diff
 + Download / Clone Project
 + 🕹 cd to the project folders
-+ Enter your keys and ids in .env files
 + 🕹 Run: npm run dev
 + voilà 🤌🏼
 ```
