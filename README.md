@@ -4,6 +4,8 @@
 
 Demo: https://cerulean-sundae-b705c9.netlify.app/
 
+![Cover](https://raw.githubusercontent.com/mojtabamoradli/Next-Digikala/main/cover.png)
+
 
 # How to use
 ```diff
