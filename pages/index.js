@@ -203,13 +203,26 @@ export default function Home() {
   const [currentMenu, setCurrentMenu] = useState(0);
   const [openSmallMenu, setOpenSmallMenu] = useState(false);
 
-  const previous = (prop) => {
-    if (currentIndex < carousel.length - 1) {
-      const isFirstSlide = currentIndex === 0;
-      const newIndex = isFirstSlide ? prop - 1 : currentIndex - 1;
-      setCurrentIndex(newIndex);
-    } else setCurrentIndex(0)
+  // const previous = (prop) => {
+  //   if (currentIndex < carousel.length - 1) {
+  //     const isFirstSlide = currentIndex === 0;
+  //     const newIndex = isFirstSlide ? prop - 1 : currentIndex - 1;
+  //     setCurrentIndex(newIndex);
+  //   } else setCurrentIndex(0)
+  // }
+
+  onst previous = (prop) => {
+  const isFirstSlide = currentIndex === 0;
+  
+  // Check if currentIndex is greater than 0, or if it's the first slide
+  if (currentIndex > 0 || isFirstSlide) {
+    const newIndex = isFirstSlide ? prop - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  } else {
+    // If currentIndex is 0 and not the first slide, go to the last slide
+    setCurrentIndex(carousel.length - 1);
   }
+}
   
   const next = (prop) => {
     if (currentIndex < carousel.length -1 ) {
